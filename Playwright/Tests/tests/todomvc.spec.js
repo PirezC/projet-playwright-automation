@@ -1,4 +1,4 @@
-import { test, expect, request } from '@playwright/test';
+import { test, expect, request } from '@playwrightest';
 
 test('API: Vérifier que la page TodoMVC se charge correctement', async () => {
   // Créer un contexte de requête API

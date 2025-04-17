@@ -7,7 +7,7 @@ export default defineConfig({
   expect: {
     timeout: 1000, // 1 secondes pour les assertions
     
-    reporter: [['html', { open: 'on-failure' }]],
+    reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
   },
   
   use: {
