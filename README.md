@@ -16,17 +16,18 @@ npm install
 npx playwright install --with-deps
 
 
-▶️ Exécution des tests en local
+## ▶️ Exécution des tests en local
 npx playwright test
 
 Exécution en mode non-headless (navigateur visible) :
 npx playwright test --headed
 
 
-📊 Rapport HTML des tests
+## 📊 Rapport HTML des tests
 npx playwright show-report
 
-🔄 Intégration Continue (CI) avec GitHub Actions
+
+## 🔄 Intégration Continue (CI) avec GitHub Actions
 Le fichier .github/workflows/playwright.yml permet de :
 
 Lancer automatiquement les tests Playwright à chaque push ou pull request sur la branche main
@@ -34,7 +35,7 @@ Lancer automatiquement les tests Playwright à chaque push ou pull request sur l
 Générer et sauvegarder un rapport HTML téléchargeable depuis GitHub
 
 
-✅ Voir les résultats dans GitHub
+## ✅ Voir les résultats dans GitHub
 Aller dans l'onglet Actions de ton dépôt
 
 Sélectionner une exécution
@@ -43,7 +44,8 @@ Télécharger le rapport dans la section Artifacts > playwright-report.zip
 
 Ouvrir index.html dans ton navigateur
 
-⚙️ Exemple de configuration Playwright
+
+## ⚙️ Exemple de configuration Playwright
 Fichier playwright.config.ts :
 
 import { defineConfig } from '@playwright/test';
@@ -61,7 +63,7 @@ export default defineConfig({
 });
 
 
-📎 Exemple de test Playwright
+## 📎 Exemple de test Playwright
 
 import { test, expect } from '@playwright/test';
 
@@ -70,7 +72,7 @@ test('Visite de la page TodoMVC', async ({ page }) => {
   await expect(page).toHaveTitle(/TodoMVC/);
 });
 
-🧰 Scripts utiles (dans package.json)
+## 🧰 Scripts utiles (dans package.json)
 "scripts": {
   "test": "npx playwright test",
   "test:headed": "npx playwright test --headed",
