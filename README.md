@@ -7,7 +7,6 @@ Ce projet contient une suite de tests automatisés E2E (end-to-end) réalisés a
 ## 📁 Structure du projet
 mon-projet/ ├── tests/ # Dossier contenant les tests (.spec.ts) │ └── exemple.spec.ts ├── .github/ │ └── workflows/ │ └── playwright.yml # Workflow GitHub Actions pour exécuter les tests automatiquement ├── playwright.config.ts # Configuration globale Playwright ├── package.json └── README.md
 
-
 ---
 
 ## 🚀 Installation
@@ -15,6 +14,7 @@ Assure-toi d'avoir **Node.js >= 16** installé, puis :
 npm install
 npx playwright install --with-deps
 
+---
 
 ## ▶️ Exécution des tests en local
 npx playwright test
@@ -22,6 +22,7 @@ npx playwright test
 Exécution en mode non-headless (navigateur visible) :
 npx playwright test --headed
 
+---
 
 ## 📊 Rapport HTML des tests
 npx playwright show-report
@@ -34,6 +35,7 @@ Lancer automatiquement les tests Playwright à chaque push ou pull request sur l
 
 Générer et sauvegarder un rapport HTML téléchargeable depuis GitHub
 
+---
 
 ## ✅ Voir les résultats dans GitHub
 Aller dans l'onglet Actions de ton dépôt
@@ -44,6 +46,7 @@ Télécharger le rapport dans la section Artifacts > playwright-report.zip
 
 Ouvrir index.html dans ton navigateur
 
+---
 
 ## ⚙️ Exemple de configuration Playwright
 Fichier playwright.config.ts :
@@ -62,6 +65,7 @@ export default defineConfig({
   reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
 });
 
+---
 
 ## 📎 Exemple de test Playwright
 
@@ -71,6 +75,8 @@ test('Visite de la page TodoMVC', async ({ page }) => {
   await page.goto('https://demo.playwright.dev/todomvc');
   await expect(page).toHaveTitle(/TodoMVC/);
 });
+
+---
 
 ## 🧰 Scripts utiles (dans package.json)
 "scripts": {
